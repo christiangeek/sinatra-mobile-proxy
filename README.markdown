@@ -44,7 +44,7 @@ I am not affiliated with Mars Hill Church in anyway and probably using this appl
 
 License
 -------------
-This code is dual licensed under the 1 Thessalonians 2:8 and Matthew 10:8 licenses.
+This code is dual licensed under the [1 Thessalonians 2:8] (http://ref.ly/1Th2.8;ESV) and [Matthew 10:8] (http://ref.ly/Mt10.8;ESV) licenses.
 
 Questions?
 -------------
