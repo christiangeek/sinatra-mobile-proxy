@@ -1,0 +1,19 @@
+!!! 5
+%html{:manifest => production? ? "/default.appcache?v=#{cache.get_timestamp}" : "", :lang => "en"}
+  %head
+    %title
+      = get_page_title(page_url) == "" ? settings.site_name : get_page_title(page_url)
+    %meta{:name => "HandheldFriendly", :content => "true"}/  
+    %meta{:name => "MobileOptimized", :content => "320"}/
+    %meta{:name => "viewport", :content => "initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}/
+    %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}/
+    %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black"}/
+    %meta{"http-equiv" => "cleartype", :content => "on"}/
+    %style
+      = stylesheet
+  %body
+    %header
+      %a{:href=>"/"}
+        %img{:src=>settings.site_logo_url, :alt=>"Logo for "+settings.site_name, :width=>settings.site_logo_width, :height=>settings.site_logo_height}/
+    = yield
+    = is_a_webkit_browser? ? javascript : ""

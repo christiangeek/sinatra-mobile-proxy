@@ -1,0 +1,12 @@
+CACHE MANIFEST
+= "# version #{cache.get_timestamp}"
+
+= settings.site_logo_url
+= is_a_webkit_browser? ? get_all_pages_as_json.join("\n") : get_all_pages.join("\n")
+
+FALLBACK:
+
+NETWORK:
+*
+http://*
+https://*

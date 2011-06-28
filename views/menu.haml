@@ -1,0 +1,7 @@
+- if title != ""
+  =haml :page_header, :layout => false, :locals => {:title => title}
+%menu
+  - links.each do |link|
+    %li{:class => link[:url] ? "arrow" : ""}
+      %a{:href=>link[:url]}
+        = link[:title]
